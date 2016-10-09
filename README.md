@@ -23,4 +23,10 @@ To build protobufs (only needed if you change something). NOTE - you must have p
 
 ### Conclusions
 
-Binary encoded formats can hurt human readability, but they are optimized for processing and transmission. If you are dealing with binary data, human readability is probably not a large concern. labix.org/v2/mgo/bson looks like the winner to me. Idomatic Go, no external dependencies or extra steps and great performance. If you are curious, you can open the output files in a hex editor to check out how the data is encoded.
+In my non-scientific testing:
+
+- bson encoding ran the fastest
+- protobuf was the smallest, beating bson by a hair
+- XML is considered harmful
+
+Binary encoded formats can hurt human readability, but they are optimized for processing and transmission. If you are dealing with binary data, human readability is probably not a large concern. Either bson or protobuf would be a great choice for high performance APIs that need to handle binary data. If you are curious, you can open the output files in a hex editor to check out how the data is encoded.
