@@ -1,5 +1,5 @@
 # compare-api-encodings
-Golang examples and comparisons of various API formats for transmitting binary data.
+Golang examples and comparisons of various encoding formats for transmitting binary data to an API endpoint.
 
 We will compare two binary efficient formats - [protobuf](https://developers.google.com/protocol-buffers/docs/overview) and [bson](http://bsonspec.org/), with two standard API 
 formats, json and xml.
