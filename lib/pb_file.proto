@@ -1,0 +1,7 @@
+syntax = "proto3";
+package lib;
+
+message PbFile {
+	string name = 1;
+	bytes data = 2;
+}
