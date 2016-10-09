@@ -1,7 +1,7 @@
 # compare-api-encodings
 Golang examples and comparisons of various API formats for transmitting binary data.
 
-We will compare two binary efficient formats - protobuf and bson, with two standard API 
+We will compare two binary efficient formats - [protobuf](https://developers.google.com/protocol-buffers/docs/overview) and [bson](http://bsonspec.org/), with two standard API 
 formats, json and xml.
 
 To install:
@@ -20,3 +20,7 @@ To Run:
 To build protobufs (only needed if you change something). NOTE - you must have protoc and protoc-gen-go.
 
 	compare-api-encodings$ protoc -I=./lib --go_out=./lib ./lib/pb_file.proto
+
+### Conclusions
+
+Binary encoded formats can hurt human readability, but they are optimized for processing and transmission. If you are dealing with binary data, human readability is probably not a large concern. labix.org/v2/mgo/bson looks like the winner to me. Idomatic Go, no external dependencies or extra steps and great performance. If you are curious, you can open the output files in a hex editor to check out how the data is encoded.
